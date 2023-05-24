@@ -1,0 +1,22 @@
+docker images						ver imagenes descargadas
+
+docker image rm imagen:nVersion				Eliminar imagen
+
+docker create imagen:nVersion				Crear contenedor
+o
+docker create container imagen:nVersion
+
+docker start IDContainer				Iniciar contenedor
+
+docker ps						Devuelve info sobre los contenedores.
+
+docker ps -a						Muestra TODOS los contenedores
+
+docker stop IDcontainer					Detener contenedor
+
+docker run nContenedor					correr contenedor(si no encuentra la imagen, la descargara, creara un contenedor y lo ejecutara)
+
+docker run -it --rm -p 80:80 -v /home/carlos/test/:/usr/local/apache2/htdocs/ --name web httpd
+
+Mediante este comando se instancia el contenedor y se expone en el puerto 8080 y se le da un nombre. 
+A parte, mostrará lo que está haciendo, crea una carpeta compartida y se eliminará al terminar.
